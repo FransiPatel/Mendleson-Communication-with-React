@@ -1,0 +1,120 @@
+.footer {
+  background-color: $footer-bg;
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 2rem auto 0;
+  font-family: Rubik;
+
+  .container {
+    .row {
+      padding: 0 50px;
+    }
+  }
+
+  h6 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  p,
+  ul li {
+    font-size: 14px;
+    color: $primary-color;
+    margin: 0;
+    line-height: 221%;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 10px 0;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  .head {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+
+  .social > h6 {
+    margin-left: 25px;
+  }
+
+  .list-items {
+    font-weight: 400;
+    font-size: 14px;
+    color: $primary-color;
+  }
+
+  // Large screens and below (lg)
+  @media (max-width: map-get($breakpoints, lg)) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+    width: 100%;
+
+    h6 {
+      font-size: 15px;
+    }
+
+    ul li {
+      font-size: 13px;
+      margin: 0 auto;
+    }
+
+    small {
+      font-size: 12px;
+    }
+
+    .social {
+      margin-left: 0;
+    }
+  }
+
+  // Small and medium screens (sm and md)
+  @media (max-width: map-get($breakpoints, sm)),
+    (max-width: map-get($breakpoints, md)) {
+    padding: 20px 10px;
+    width: 100%;
+
+    h6 {
+      font-size: 14px;
+    }
+
+    ul li {
+      font-size: 12px;
+      margin-left: 40%;
+      margin-right: auto;
+    }
+
+    .email > p {
+      margin-left: -45%;
+    }
+
+    small {
+      font-size: 11px;
+    }
+
+    .social > h6 {
+      margin-left: 0;
+    }
+  }
+}

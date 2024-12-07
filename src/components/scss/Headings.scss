@@ -1,0 +1,36 @@
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index:5;
+}
+
+.heading {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 57px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Matches the totalWidth prop */
+
+  .line-thick {
+    height: 7px;
+    background-color: $border-primary;
+    border-radius: 4px;
+    transition: width 0.3s ease; /* Smooth transition for dynamic widths */
+  }
+
+  .line-thin {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $border-primary;
+    margin-top: 1px;
+  }
+}

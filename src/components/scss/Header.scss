@@ -1,0 +1,52 @@
+.header{
+    position:relative;
+    z-index:2;
+    height:auto;
+    background: transparent;
+
+    .nav-links{
+        color:black;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size:1.125rem;
+        margin-left:auto;
+        display:flex;
+        justify-content: flex-end;
+        gap:35px;
+    }
+}
+.header-backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none; // Ensure images don’t interfere with interactions
+  
+    .asset {
+      position: absolute;
+      max-width: 300px; // Set a base size
+      height: auto;
+      overflow-x: hidden;
+  
+      &.asset-left {
+        top: 0;
+        left: 0;
+      }
+  
+      &.asset-right {
+        top: 0;
+        right: 0;
+      }
+  
+      @media (max-width: 1024px) {
+        max-width: 200px; // Scale down on medium screens
+      }
+  
+      @media (max-width: 768px) {
+        max-width: 150px; // Further scale down on small screens
+      }
+    }
+  }
+  

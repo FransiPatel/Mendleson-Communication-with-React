@@ -1,0 +1,192 @@
+#services {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-top: 5rem;
+
+  .services-container {
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  .service-row {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+    gap: 10rem;
+
+    &.reverse {
+      flex-direction: row-reverse;
+      gap: 10rem;
+    }
+
+    .service-content {
+      padding: 1rem;
+      text-align: left;
+
+      .service-title {
+        font-size: 2.625rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        color: $primary-color;
+        text-transform: uppercase;
+        font-family: Rubik;
+      }
+
+      .service-description {
+        font-size: 1rem;
+        line-height: 147.5%;
+        color: $primary-color;
+        font-family: Rubik;
+      }
+    }
+
+    .service-image {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        max-width: 80%; 
+      }
+    }
+  }
+
+  .service-backgrounds {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+
+      &.assets63 {
+        right: 0;
+        bottom: 55%;
+      }
+
+      &.assets71 {
+        left: 0;
+        bottom: 25%;
+      }
+
+      &.assets82 {
+        right: 0;
+        bottom: 5%;
+      }
+
+      &.assets52{
+        left:0;
+        bottom:-15%;
+        z-index:-5;
+        width:20%;
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, xl)) {
+    .service-row {
+      gap: 8rem;
+    }
+  
+    .service-image img {
+      max-width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: map-get($breakpoints, lg)) {
+    .service-row {
+      flex-direction: column;
+      gap: 4rem;
+  
+      &.reverse {
+        flex-direction: column;
+        gap: 4rem;
+      }
+  
+      .service-content {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+  
+    .service-image img {
+      max-width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    .service-row {
+      flex-direction: column;
+      gap: 2rem;
+  
+      &.reverse {
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .service-content {
+        margin-right: 0;
+        margin-left: 0;
+      }
+  
+      .service-image {
+        margin-bottom: 1rem;
+      }
+    }
+  
+    .service-image img {
+      max-width: 70%;
+    }
+  
+    h2, .services-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    .service-row {
+      gap: 0rem;
+
+      .service-content {
+        padding: 1rem;
+        text-align: center;
+  
+        .service-title {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+    }
+  }    
+  
+    &.reverse {
+      flex-direction: column;
+      gap: 0rem;
+  
+      .service-image img {
+        max-width: 50%;  // Reduce size for alternate image
+      }
+    }
+  
+    .service-image img {
+      max-width: 60%;
+    }
+  
+    h2, .services-heading {
+      font-size: 1.5rem;
+    }
+  }
+}  

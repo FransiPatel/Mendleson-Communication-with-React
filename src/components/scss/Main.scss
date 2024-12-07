@@ -1,0 +1,117 @@
+.hero {
+  @include flex;
+  height: 750px;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 21px;
+
+  @media (max-width: map-get($breakpoints, lg)) {
+    height: 666px;
+  }
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    height: 575px;
+  }
+
+  @media (max-width: 445px) {
+    height: 517px;
+  }
+
+  &-part1 {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-part2 {
+    width: 46%;
+    margin-left: 50%;
+    z-index: 10;
+    margin-bottom: 13rem;
+    font-family:Rubik;
+
+    @media (max-width: map-get($breakpoints, lg)) {
+      width: 68%;
+      margin-bottom: 10rem;
+      margin-left: 10%;
+    }
+
+    @media (max-width: map-get($breakpoints, md)) {
+      width: 78%;
+      margin-left: 10%;
+    }
+
+    @media (max-width: map-get($breakpoints, sm)) {
+      width: 93%;
+      margin-bottom: 14rem;
+      margin-left: auto;
+    }
+
+    &__title {
+      max-width: 460px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 56px;
+      line-height: 66px;
+      margin-bottom: 25px;
+
+      @media (max-width: map-get($breakpoints, lg)) {
+        max-width: 400px;
+        font-size: 43px;
+        line-height: 57px;
+        margin-bottom: 23px;
+      }
+
+      @media (max-width: map-get($breakpoints, md)) {
+        max-width: 400px;
+        font-size: 43px;
+        line-height: 57px;
+        margin-bottom: 23px;
+      }
+
+      @media (max-width: 445px) {
+        max-width: 340px;
+        font-size: 28px;
+        line-height: 41px;
+      }
+    }
+
+    &__text {
+      max-width: 460px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 21px;
+      color:$primary-color;
+
+      @media (max-width: map-get($breakpoints, lg)) {
+        max-width: 400px;
+        // font-size: 15px;
+        line-height: 20px;
+      }
+
+      @media (max-width: 445px) {
+        max-width: 340px;
+        // font-size: 11px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  &-part3 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      overflow-x: hidden;
+
+      @media (max-width: map-get($breakpoints, lg)) {
+        max-width: 20%;
+      }
+
+      @media (max-width: map-get($breakpoints, md)) {
+        max-width: 12%;
+      
+    }
+  }
+}
