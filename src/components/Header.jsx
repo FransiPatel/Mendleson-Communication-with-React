@@ -31,8 +31,8 @@ function Header() {
         <Nav className="nav-links">
           <Nav.Link href="#about-us">About Us</Nav.Link>
           <Nav.Link href="#services">Services</Nav.Link>
-          <Nav.Link href="#team">Team</Nav.Link>
-          <Nav.Link href="#clients">Clients</Nav.Link>
+          <Nav.Link href="#ourteam">Team</Nav.Link>
+          <Nav.Link href="#ourclients">Clients</Nav.Link>
           <Nav.Link href="#contact-us">Contact Us</Nav.Link>
         </Nav>
       </Navbar.Collapse>

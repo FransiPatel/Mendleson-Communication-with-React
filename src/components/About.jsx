@@ -8,7 +8,7 @@ import assets5 from './images/Asset53.png';
 
 const AboutUs = () => {
   return (
-    <section className="container about-us">
+    <section className="container about-us" id="about-us">
       <div className="row align-items-center">
         {/* Left Side Image Section */}
         <div className="col-12 col-md-6 about-image">
@@ -42,7 +42,7 @@ const AboutUs = () => {
               <h3 className="column-heading">Engagement</h3>
               <p className="column-text">
                 We are engagement specialists, who have led projects at all levels of the IAP2 spectrum.
-                <a href="#" className="read-more"> Read More</a>
+                <a href="#services" className="read-more"> Read More</a>
               </p>
             </div>
 
@@ -56,7 +56,7 @@ const AboutUs = () => {
               <h3 className="column-heading">Communications</h3>
               <p className="column-text">
                 We are award-winning leaders in communications and campaign management.
-                <a href="#" className="read-more"> Read More</a>
+                <a href="#services" className="read-more"> Read More</a>
               </p>
             </div>
           </div>

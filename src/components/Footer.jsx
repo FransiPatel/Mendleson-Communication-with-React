@@ -5,9 +5,9 @@ import linkedin from './images/linkedin.png';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: facebook, label: "Facebook" },
-    { icon: linkedin, label: "LinkedIn" },
-    { icon: google, label: "Google +" },
+    { icon: facebook, label: "Facebook", url:"https://www.facebook.com/" },
+    { icon: linkedin, label: "LinkedIn", url:"https://in.linkedin.com/" },
+    { icon: google, label: "Google +", url:"https://www.google.com/" },
   ];
 
   const exploreLinks = ["Services", "Team", "Clients"];
@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <>
-    <footer className="footer bg-lightblue py-4 ">
+    <footer className="footer bg-lightblue py-4 " id="contact-us">
       <div className="container">
         <div className="row text-center text-md-start mt-4">
           {/* Social Section */}
@@ -36,7 +36,8 @@ const Footer = () => {
                     alt={item.label.toLowerCase()}
                     className="me-2"
                   />
-                  {item.label}
+                  <a href={item.url} target="_blank">
+                  {item.label} </a>
                 </li>
               ))}
             </ul>
